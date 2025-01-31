@@ -1,0 +1,7 @@
+{
+    "host": "monorail.proxy.rlwy.net",
+    "database": "railway",
+    "user": "postgres",
+    "password": "qbFxICIyWvrOtJpusVtOolNtlTdXVeGY",
+    "port": 40598
+}
