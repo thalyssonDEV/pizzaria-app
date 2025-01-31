@@ -1,11 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-import conn
+from conn import connect_to_db
 
-# Server Flask
+# Inicializa o servidor Flask
 app = Flask(__name__)
 
 @app.route('/')
 def home() -> None:
-    return render_template('index.html')
+    # Renderiza a página principal localmente no Flask
+    return render_template('main_page.html')
 
-conn.connect_to_db()
+@app.route("/register", methods=["GET", "POST"])
+def register() -> None:
+    # Rota para registro de usuários (ainda não implementada)
+    pass
+
+if __name__ == '__main__':
+    # Executa o servidor Flask em modo de depuração
+    app.run(debug=True)
