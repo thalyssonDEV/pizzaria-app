@@ -1,0 +1,25 @@
+.main_title {
+    color: blue; /* Azul Elétrico */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Sombra mais forte para destacar */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Josefin Sans", sans-serif;
+    margin-left: 2px;
+    cursor: default;
+    font-weight: bold;
+    -webkit-text-stroke: 1px white;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background:url("../images/teste.png") no-repeat center center fixed;
+    background-size: cover;
+    background-color: whitesmoke
+}
