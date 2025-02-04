@@ -1,5 +1,5 @@
 .main_title {
-    color: blue; /* Azul Elétrico */
+    color: rgb(137, 246, 3); /* Azul Elétrico */
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Sombra mais forte para destacar */
     border-radius: 5px;
     padding: 10px;
@@ -19,7 +19,94 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background:url("../images/teste.png") no-repeat center center fixed;
+    background:url("../images/background.png") no-repeat center center fixed;
     background-size: cover;
     background-color: whitesmoke
+}
+
+.main_container {
+    width: 270px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-right: 35px;
+    padding-left: 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    background-color: white;
+}
+
+input {
+    background-color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid white; /* Cor e espessura da borda */
+    border-radius: 10px; /* Arredonda os cantos dos inputs */
+    outline: none; /* Remove a linha de foco padrão */
+    width: 100%; /* Faz com que o input ocupe toda a largura do container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+input::placeholder {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+  
+
+
+button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.send_button {
+    margin-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 94px;
+    padding-right: 100px;
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Arredonda os cantos do botão */
+    background-color: black; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.send_button:hover {
+    background-color: rgb(7, 161, 250); /* Cor de fundo ao passar o mouse */
+}
+
+.change_container {
+    width: 100%;
+    text-align: right;
+    margin-top: -5px;
+}
+  
+.change_text {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px; /* Tamanho da fonte aumentado */
+    color: #000000; /* Cor preta */
+    cursor: default;
+}
+  
+.change_text a {
+    color: rgb(16, 0, 247);
+    text-decoration: none;
+}
+  
+.change_text a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
