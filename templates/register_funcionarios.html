@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>La Vera Pizza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-ico">
+
+  </head>
+
+  <body>
+
+    <div class="main_title">
+      <h1>LA VERA PIZZA</h1>
+    </div>
+
+
+    <form id="form_register_funcionarios" action="/register_funcionarios" method="POST">
+
+      <div class="main_container">
+
+        <input type="text" id="nome" name="nome" placeholder="Nome" required /><br /><br />
+        <input type="password" id="senha" name="senha" placeholder="Senha" required /><br /><br />
+
+
+        <div class="change_container">
+
+          <p class="change_text">Já está registrado? <a href="{{ url_for('logar') }}">Entrar</a></p>
+
+        </div>
+
+        <button class="send_button" type="submit">REGISTRAR</button>
+
+      </div>
+
+    </form>
+
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
