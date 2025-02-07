@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recibo - La Vera Pizza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik+Wet+Paint&display=swap" 
+      rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-ico">
+    <!-- Link para o CSS exclusivo do recibo -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recibo.css') }}" />
+  </head>
+  <body>
+    <!-- Contêiner exclusivo para a página de recibo -->
+    <div class="recibo-wrapper">
+      <div class="main_title">
+        <h1>LA VERA PIZZA</h1>
+      </div>
+      <div class="main_container">
+        <h2>Recibo</h2>
+        
+        <div class="usuario-info">
+           <h3>Informações do Cliente</h3>
+           <p><strong>Nome:</strong> {{ usuario.nome }}</p>
+           <p><strong>Endereço:</strong> {{ usuario.endereco }}</p>
+           <p><strong>Telefone:</strong> {{ usuario.telefone }}</p>
+        </div>
+        
+        <div class="pedido-info">
+           <h3>Pizzas Pedidas</h3>
+           <ul>
+             {% for pedido in pedidos %}
+                <li>
+                  <span>{{ pedido.sabor }} - {{ pedido.tamanho }}</span>
+                  <span>R$ {{ pedido.preco }}</span>
+                </li>
+             {% endfor %}
+           </ul>
+           <h3 class="total">Total: R$ {{ pedidos | sum(attribute='preco') }}</h3>
+        </div>
+        
+        <!-- Botões para imprimir e baixar o recibo -->
+        <div class="print-buttons">
+          <button onclick="window.print()">Imprimir Recibo</button>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
