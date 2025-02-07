@@ -1,20 +1,6 @@
 import psycopg2
 import os, sys
 
-# def load_db_config():
-#     # Define o caminho do arquivo de configuração JSON do banco de dados
-#     config_path = os.path.join(os.path.dirname(__file__), "json/db_config.json")
-
-#     try:
-#         # Abre e carrega as configurações do banco de dados a partir do arquivo JSON
-#         with open(config_path, "r") as config_file:
-#             return json.load(config_file)
-        
-#     except (FileNotFoundError, json.JSONDecodeError) as e:
-#         # Exibe erro caso o arquivo não seja encontrado ou contenha erro de formatação
-#         print(f"Erro ao Carregar o Arquivo de Configuração: {e}")
-#         sys.exit(1)  # Encerra a execução do programa
-
 def check_env_vars():
     # Verifica se todas as variáveis de ambiente necessárias estão definidas
     required_vars = ["host", "database", "user", "password", "port"]

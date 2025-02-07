@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>La Vera Pizza - Selecione Pizzas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-ico">
+  </head>
+  <body>
+    <div class="main_title">
+      <h1>MENU PIZZAS</h1>
+    </div>
+    <form id="pizza_form" action="/add_pizza" method="POST">
+      <div class="main_container">
+        <h1>Escolha a Pizza</h1>
+        <!-- Dropdown para selecionar o sabor -->
+        <select id="pizza-select" style="width: 100%;" name="sabor" required>
+          <option value="" disabled selected>Sabor da Pizza</option>
+          <!-- As opções de pizza serão inseridas pelo JS (ou você pode incluí-las manualmente) -->
+        </select>
+        
+        <div id="tamanho-pizza">
+          <h1>Tamanho</h1>
+          <label class="radio-option">
+            <input type="radio" name="tamanho" value="P" required>
+            <span>P - R$ 35</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="tamanho" value="M">
+            <span>M - R$ 45</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="tamanho" value="G">
+            <span>G - R$ 50</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="tamanho" value="GG">
+            <span>GG - R$ 70</span>
+          </label>
+        </div>
+        <div class="botoes">
+          <button class="send_button" type="submit" name="action" value="adicionar">Adicionar</button>
+          <button class="send_button" type="submit" name="action" value="recibo" formnovalidate>Recibo</button>
+        </div>
+      </div>
+    </form>
+    <script src="{{ url_for('static', filename='js/retornarPizza.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/retornarTamanho.js') }}"></script>
+  </body>
+</html>
