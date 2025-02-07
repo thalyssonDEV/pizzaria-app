@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify, make_response
 from conn import connect_to_db
 import auth
-import pdfkit
 
 app = Flask(__name__)
 
